@@ -168,6 +168,3 @@ report = metrics.evaluate_from_files(
 print(report.mean_sdr(), report.summary())
 ```
 
-## Лицензия
-
-MIT.
