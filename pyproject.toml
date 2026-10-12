@@ -1,0 +1,59 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "music-framework"
+version = "0.1.0"
+description = "Модульный фреймворк для цифровой обработки музыки с нейросетями"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "Music Framework" }]
+keywords = ["audio", "music", "dsp", "neural-networks", "demucs", "librosa"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Multimedia :: Sound/Audio :: Analysis",
+]
+
+dependencies = [
+    "numpy>=1.21",
+    "scipy>=1.9",
+    "soundfile>=0.12",
+    "librosa>=0.10",
+    "torch>=2.0",
+    "torchaudio>=2.0",
+    "demucs>=4.0",
+    "pyrubberband>=0.3",
+    "rubberband>=0.1",
+    "audiomentations>=0.35",
+    "torchmetrics>=1.0",
+    "gradio>=4.0",
+    "Pillow>=9.0",
+    "matplotlib>=3.6",
+    "tqdm>=4.64",
+]
+
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "black", "ruff"]
+gui = ["gradio", "Pillow", "matplotlib"]
+
+[project.scripts]
+music-framework = "music_framework.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.black]
+line-length = 100
+target-version = ["py39"]
+
+[tool.ruff]
+line-length = 100
+select = ["E", "F", "I", "W"]
