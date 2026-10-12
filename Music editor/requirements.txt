@@ -1,0 +1,29 @@
+# Core I/O & Analysis
+numpy>=1.21
+scipy>=1.9
+soundfile>=0.12
+librosa>=0.10
+
+# Neural networks & audio
+torch>=2.0
+torchaudio>=2.0
+demucs>=4.0
+
+# Optional: для CLI и серверной обработки темпа/тона (в веб-интерфейсе темп и тон меняются в браузере)
+pyrubberband>=0.3
+
+# Post-processing
+noisereduce>=3.0
+
+# Augmentation
+audiomentations>=0.35
+
+# Metrics
+torchmetrics>=1.0
+mir_eval>=0.6
+
+# Web UI
+gradio>=4.0
+Pillow==10.4.0
+matplotlib>=3.6
+tqdm>=4.64
